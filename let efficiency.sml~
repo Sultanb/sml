@@ -1,0 +1,22 @@
+(* return [from,from+1,.......,to]*)
+fun countup (from:int,to:int)=
+    if from = to
+    then to::[]
+    else from::countup(from+1,to)
+
+(*return [from,from-1,.......,to]*)
+fun coutdown (from:int,to:int)=
+    if from = t0
+    then to::[]
+    else from::countdown(from-1::to)
+
+(* function that takes a list of integers and return the maximum number in the list*)
+fun bad_max (xs:int list)=
+    if null xs
+    then 0
+    else if null (tl xs)
+    then hd xs
+    else if hd xs > bad_max (tl xs)
+    then hd xs
+    else bad_max (tl xs)
+		 
